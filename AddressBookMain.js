@@ -39,8 +39,20 @@ class AddressMainBook {
         });
     }
 
+    static getAllDetails(){
+        fs.readFile('addressBook.txt','utf8',(error,data)=>{
+            if(error){
+                console.log("Error in reading file");
+            }else{
+                console.log(data);
+            }
+        })
+    }
+
 }
 
 let addressBook1 = new AddressMainBook("Rahul", "Kumar", "Kankarbagh", "Patna", "Bihar", 800020, 1234567890, "kethan@yahoo.com");
 
-addressBook1.createDetails();
+// addressBook1.createDetails();
+
+AddressMainBook.getAllDetails();
