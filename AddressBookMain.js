@@ -47,6 +47,10 @@ class AddressMainBook {
         this.setEmail = function(email){
             this.email = email;
         }
+
+        this.setState = function(state){
+            this.state = state;
+        }
     }
 
 
@@ -78,6 +82,7 @@ class AddressMainBook {
     }
 
     updateDetails() {
+        
         this.deleteDetails();
 
         this.setFirstName("Alex");
@@ -87,9 +92,13 @@ class AddressMainBook {
         this.setCity("New York");
         this.setZip(10001);
         this.setPhone(1234567890);
+        this.setState("Ohio");
 
-        this.createDetails();
+        setTimeout(()=>{
+            this.createDetails();
+        }, 2000);
     }
+
 
 
     deleteDetails() {
@@ -100,18 +109,20 @@ class AddressMainBook {
                 console.log("Error in reading file " + error.message);
                 return;
             }
+
             let dataArray = data.split('\n\n\n');
             let newData = dataArray
                             .filter((data) => !data.includes(email))
                             .join('\n\n\n');
-            fs.writeFile('addressBook.txt', newData, (error) => {
-                if (error) {
-                    console.log("Error in writing file " + error.message);
-                } else {
-                    console.log("Data deleted successfully");
-                }
-            })
-        });
+                            fs.writeFile('addressBook.txt', newData, (error) => {
+                                if (error) {
+                                    console.log("Error in writing file " + error.message);
+                                } else {
+                                    console.log("new Data written successfully");
+                                }
+                            });
+            
+                        });
     }
 
 
@@ -132,6 +143,6 @@ let addressBook5 = new AddressMainBook("Rahul", "Kumar", "Kankarbagh", "Patna", 
 
 // AddressMainBook.getAllDetails();
 
-// addressBook1.updateDetails();
+addressBook4.updateDetails();
 
 // addressBook4.deleteDetails();
