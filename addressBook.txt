@@ -8,3 +8,33 @@ Phone: 1234567890
 Email: kethan@yahoo.com
 
 
+First Name: Alex
+Last Name: sins
+Address: Kankarbagh
+City: Patna
+State: Bihar
+Zip: 800020
+Phone: 1234567890
+Email: dummy@yahoo.com
+
+
+First Name: Rahul
+Last Name: Kumar
+Address: Kankarbagh
+City: Patna
+State: Bihar
+Zip: 800020
+Phone: 1234567890
+Email: random@gmail.com
+
+
+First Name: Rahul
+Last Name: Kumar
+Address: Kankarbagh
+City: Patna
+State: Bihar
+Zip: 800020
+Phone: 1234567890
+Email: hello@yahoo.com
+
+
